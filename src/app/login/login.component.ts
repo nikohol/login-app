@@ -1,3 +1,5 @@
+import { MediaService } from './../services/media.service';
+import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  private username: string = '';
+  private password: string = '';
+
+  constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
+  }
+
+  login = () => {
+    const user = {
+      username: this.username,
+      password: this.password
+    };
+    this.mediaService.setUser(user);
+    this.mediaService.login();
+
   }
 
 }

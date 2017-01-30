@@ -1,3 +1,4 @@
+import { MediaService } from './../services/media.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  private username: string = '';
+  private password: string = '';
+  private email: string = '';
+
+  constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
+  }
+
+  register = () => {
+    const ruser = {
+      username: this.username,
+      password: this.password,
+      email: this.email
+    };
+    this.mediaService.registerUser(ruser);
+    this.mediaService.login();
   }
 
 }
