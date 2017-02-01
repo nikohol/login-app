@@ -1,10 +1,10 @@
-/*import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class MediaService {
+export class LoginService {
 
   private url: string = 'http://media.mw.metropolia.fi/wbma';
 
@@ -27,7 +27,7 @@ export class MediaService {
 
   login = () => {
     /*this.http.post(this.url, this.user,);*/
-/*
+
     return this.http.post(this.url + '/login', this.user)
       .subscribe(
       resp => {
@@ -55,4 +55,3 @@ export class MediaService {
   }
 
 }
-*/

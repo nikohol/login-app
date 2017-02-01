@@ -1,4 +1,5 @@
-import { MediaService } from './services/media.service';
+import { LoginService } from './services/login.service';
+/*import { MediaService } from './services/media.service';*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -51,7 +52,7 @@ const routeConfig = [
     HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [MediaService],
+  providers: [/*MediaService,*/ LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
